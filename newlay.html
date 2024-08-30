@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shift Handover Log System</title>
+    <link rel="stylesheet" href="newlay.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="menu">
+            <a href="#" class="menu-item">Menu</a>
+        </div>
+        <div class="back-button">
+            <a href="page2.html"
+             class="back-link">Back</a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>Shift Handover Log System</h1>
+
+        <div class="log-form">
+            <h2>New Log Entry</h2>
+            <form id="logForm">
+                <label for="shift">Shift:</label>
+                <select id="shift" required>
+                    <option value="Morning">Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                    <option value="Night">Night</option>
+                </select>
+
+                <label for="operatorName">Operator Name:</label>
+                <input type="text" id="operatorName" required>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+
+                <label for="logDetails">Log Details:</label>
+                <textarea id="logDetails" rows="5" required></textarea>
+
+                <button type="submit">Submit Log</button>
+            </form>
+        </div>
+
+        <div class="log-table">
+            <h2>Shift Logs</h2>
+            <table id="logsTable">
+                <thead>
+                    <tr>
+                        <th>Shift</th>
+                        <th>Operator Name</th>
+                        <th>Date</th>
+                        <th>Log Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Logs will be inserted here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="newlay.js"></script>
+</body>
+</html>
